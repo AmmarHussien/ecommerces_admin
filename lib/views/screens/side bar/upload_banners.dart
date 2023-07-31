@@ -4,6 +4,8 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 
+import 'widgets/banners_widget.dart';
+
 class UploadBanner extends StatefulWidget {
   static const String routeName = '/UploadBanner';
 
@@ -148,6 +150,18 @@ class _UploadBannerState extends State<UploadBanner> {
               color: Colors.grey,
             ),
           ),
+          Container(
+            alignment: Alignment.topLeft,
+            padding: const EdgeInsets.all(10),
+            child: const Text(
+              'Banners',
+              style: TextStyle(
+                fontWeight: FontWeight.w700,
+                fontSize: 30,
+              ),
+            ),
+          ),
+          BannersWidgets(),
         ],
       ),
     );
